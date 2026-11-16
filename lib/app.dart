@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'core/routes/app_routes.dart';
 import 'core/theme/app_theme.dart';
+import 'core/theme/camp_sense_scroll_behavior.dart';
 import 'features/user/data/sqlite_user_repository.dart';
 import 'features/user/data/user_repository.dart';
 import 'features/user/providers/admin_users_provider.dart';
@@ -67,6 +68,7 @@ class CampSenseApp extends StatelessWidget {
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
             themeMode: themeProvider.themeMode,
+            scrollBehavior: const CampSenseScrollBehavior(),
             // French localization setup
             locale: const Locale('fr', 'FR'),
             supportedLocales: const [
